@@ -21,29 +21,6 @@ require 'rake'
 require 'rake/rdoctask'
 require 'rake/testtask'
 
-begin
-  require 'jeweler'
-  Jeweler::Tasks.new do |gem|
-    gem.name = "radiant-layouts-extension"
-    gem.summary = %Q{Extends Radiant Layouts to support nesting, sharing with Rails Controllers and rendering HAML}
-    gem.description = %Q{Extends Radiant Layouts to support nesting, sharing with Rails Controllers and rendering HAML}
-    gem.email = "dk@dirkkelly.com"
-    gem.homepage = "http://github.com/squaretalent/radiant-layouts-extension"
-    gem.authors = ["Michael Klett", "Jim Gay", "William Ross", "Tony Issakov", "Dirk Kelly"]
-    gem.add_dependency 'radiant',                     '>= 0.9.1'
-    gem.add_development_dependency 'rspec',           '>= 1.3.0'
-    gem.add_development_dependency 'rspec-rails',     '>= 1.3.2'
-    gem.add_development_dependency 'cucumber',        '>= 0.8.5'
-    gem.add_development_dependency 'cucumber-rails',  '>= 0.3.2'
-    gem.add_development_dependency 'database_cleaner','>= 0.4.3'
-    gem.add_development_dependency 'ruby-debug',      '>= 0.10.3'
-    gem.add_development_dependency 'webrat',          '>= 0.10.3'
-  end
-  Jeweler::GemcutterTasks.new
-rescue LoadError
-  puts "Jeweler (or a dependency) not available. This is only required if you plan to package layouts as a gem."
-end
-
 # In rails 1.2, plugins aren't available in the path until they're loaded.
 # Check to see if the rspec plugin is installed first and require
 # it if it is.  If not, use the gem version.
