@@ -2,7 +2,7 @@ module NestedLayouts
   module Tags
     module Core
       
-      include Radiant::Taggable
+      include TrustyCms::Taggable
   
       class TagError < StandardError; end
 

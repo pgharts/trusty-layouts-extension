@@ -5,12 +5,12 @@
 # it if it is.  If not, use the gem version.
 
 # Determine where the RSpec plugin is by loading the boot
-unless defined? RADIANT_ROOT
+unless defined? TRUSTY_CMS_ROOT
   ENV["RAILS_ENV"] = "test"
   case
-  when ENV["RADIANT_ENV_FILE"]
-    require File.dirname(ENV["RADIANT_ENV_FILE"]) + "/boot"
-  when File.dirname(__FILE__) =~ %r{vendor/radiant/vendor/extensions}
+  when ENV["TRUSTY_ENV_FILE"]
+    require File.dirname(ENV["TRUSTY_ENV_FILE"]) + "/boot"
+  when File.dirname(__FILE__) =~ %r{vendor/trusty_cms/vendor/extensions}
     require "#{File.expand_path(File.dirname(__FILE__) + "/../../../../../")}/config/boot"
   else
     require "#{File.expand_path(File.dirname(__FILE__) + "/../../../")}/config/boot"
@@ -25,13 +25,13 @@ require 'rake/testtask'
 # Check to see if the rspec plugin is installed first and require
 # it if it is.  If not, use the gem version.
 
-# Determine where the RSpec plugin is by loading the boot
-unless defined? RADIANT_ROOT
+# Determine where the TRUSTY_CMS_ROOT plugin is by loading the boot
+unless defined? TRUSTY_CMS_ROOT
   ENV["RAILS_ENV"] = "test"
   case
-  when ENV["RADIANT_ENV_FILE"]
-    require File.dirname(ENV["RADIANT_ENV_FILE"]) + "/boot"
-  when File.dirname(__FILE__) =~ %r{vendor/radiant/vendor/extensions}
+  when ENV["TRUSTY_ENV_FILE"]
+    require File.dirname(ENV["TRUSTY_ENV_FILE"]) + "/boot"
+  when File.dirname(__FILE__) =~ %r{vendor/trusty/vendor/extensions}
     require "#{File.expand_path(File.dirname(__FILE__) + "/../../../../../")}/config/boot"
   else
     require "#{File.expand_path(File.dirname(__FILE__) + "/../../../")}/config/boot"
@@ -42,14 +42,14 @@ require 'rake'
 require 'rake/rdoctask'
 require 'rake/testtask'
 
-rspec_base = File.expand_path(RADIANT_ROOT + '/vendor/plugins/rspec/lib')
+rspec_base = File.expand_path(TRUSTY_CMS_ROOT + '/vendor/plugins/rspec/lib')
 $LOAD_PATH.unshift(rspec_base) if File.exist?(rspec_base)
 require 'spec/rake/spectask'
 require 'cucumber'
 require 'cucumber/rake/task'
 
-# Cleanup the RADIANT_ROOT constant so specs will load the environment
-Object.send(:remove_const, :RADIANT_ROOT)
+# Cleanup the TRUSTY_CMS_ROOT constant so specs will load the environment
+Object.send(:remove_const, :TRUSTY_CMS_ROOT)
 
 extension_root = File.expand_path(File.dirname(__FILE__))
 

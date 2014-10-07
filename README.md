@@ -6,7 +6,7 @@ Merges share_layouts and nested_layouts, making the whole layout adventure a lot
 
 ### Introduction
 
-Allows Rails controllers/actions to use Radiant layouts as their "layout".
+Allows Rails controllers/actions to use Trusty CMS layouts as their "layout".
 content_for blocks are mapped to page parts, with the exception of :title and
 :breadcrumbs, which map to their specific default tags. The default content, 
 or @content_for_layout, is mapped to the 'body' part.
@@ -14,26 +14,26 @@ or @content_for_layout, is mapped to the 'body' part.
 #### Inside a controller Controller
 
     SomeController < SiteController
-      radiant_layout 'Layout name'
+      trusty_layout 'Layout name'
 
     # or
 
-      radiant_layout { |controller| c.action_name == "index" ? "main" : "alt" }
+      trusty_layout { |controller| c.action_name == "index" ? "main" : "alt" }
     
     # and
     
       def delete
-        @radiant_layout = 'delete'
+        @trusty_layout = 'delete'
       end
       
     end
 
-radiant_layout takes the same options as the built-in layout.  To specifically
-override the Radiant layout and use a standard Rails one use 
+trusty_layout takes the same options as the built-in layout.  To specifically
+override the Trusty CMS layout and use a standard Rails one use 
 :layout => "mine", or :layout => false for no layout, as options to render.
 
-To choose a different Radiant layout, set the @radiant_layout instance 
-variable to the name of a Radiant layout in your controller or view.
+To choose a different Trusty CMS layout, set the @trusty_layout instance 
+variable to the name of a Trusty CMS layout in your controller or view.
 
 ### Acknowledgments
 

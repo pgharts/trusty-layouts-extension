@@ -20,7 +20,7 @@ module HamlLayouts
             self[:content_type] == 'haml' ? 'text/html' : self[:content_type]
           end
 
-          # Overwrites the standard Radiant Render and pumps out haml if necessary
+          # Overwrites the standard Trusty CMS Render and pumps out haml if necessary
           def is_haml?
             self[:content_type] == 'haml'
           end

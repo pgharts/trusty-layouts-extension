@@ -5,14 +5,14 @@ module ShareLayouts
         def self.included(base)
           base.class_eval do
             
-            def radiant_layout(name = @radiant_layout)
+            def trusty_layout(name = @trusty_layout)
               page = find_page
               assign_attributes!(page, name)
               page.build_parts_from_hash!(extract_captures) 
               page.render
             end
             
-            def assign_attributes!(page, name = @radiant_layout)
+            def assign_attributes!(page, name = @trusty_layout)
               page.layout = Layout.find_by_name(name) || page.layout
               page.title = @title || @content_for_title || page.title || ''
               page.breadcrumb = @breadcrumb || @content_for_breadcrumb || page.breadcrumb || page.title
