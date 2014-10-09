@@ -21,12 +21,12 @@ namespace :trusty_cms do
         Dir[LayoutsExtension.root + "/public/**/*"].reject(&is_svn_or_dir).each do |file|
           path = file.sub(LayoutsExtension.root, '')
           directory = File.dirname(path)
-          mkdir_p RAILS_ROOT + directory, :verbose => false
-          cp file, RAILS_ROOT + path, :verbose => false
+          mkdir_p Rails.root + directory, :verbose => false
+          cp file, Rails.root + path, :verbose => false
         end
-        unless LayoutsExtension.root.starts_with? RAILS_ROOT # don't need to copy vendored tasks
+        unless LayoutsExtension.root.starts_with? Rails.root # don't need to copy vendored tasks
           puts "Copying rake tasks from LayoutsExtension"
-          local_tasks_path = File.join(RAILS_ROOT, %w(lib tasks))
+          local_tasks_path = File.join(Rails.root, %w(lib tasks))
           mkdir_p local_tasks_path, :verbose => false
           Dir[File.join LayoutsExtension.root, %w(lib tasks *.rake)].each do |file|
             cp file, local_tasks_path, :verbose => false
