@@ -8,12 +8,12 @@ module ShareLayouts
             def trusty_layout(name = @trusty_layout)
               page = find_page
               assign_attributes!(page, name)
-              page.build_parts_from_hash!(extract_captures) 
+              page.build_parts_from_hash!(extract_captures)
               page.render
             end
             
             def assign_attributes!(page, name = @trusty_layout)
-              page.layout = Layout.find_by_name(name) || page.layout
+              page.layout = Layout.where(name: name).first || page.layout
               page.title = @title || @content_for_title || page.title || ''
               page.breadcrumb = @breadcrumb || @content_for_breadcrumb || page.breadcrumb || page.title
               page.breadcrumbs = @breadcrumbs || @content_for_breadcrumbs || nil
@@ -25,13 +25,11 @@ module ShareLayouts
             end
             
             def extract_captures
-              variables = instance_variables.grep(/@content_for_/)
-              variables.inject({}) do |h, var|
-                var =~ /^@content_for_(.*)$/
-                key = $1.intern
+              @view_flow.content.inject({}) do |h, var|
+                key = var[0]
                 key = :body if key == :layout
                 unless key == :title || key == :breadcrumbs
-                  h[key] = instance_variable_get(var)
+                  h[key] = var[1]
                 end
                 h
               end
