@@ -1,8 +1,8 @@
 # Layouts Extension
 
-Is a collaboration of many parties that solves some common shortcomings with standard Radiant layouts
+Is a collaboration of many parties that solved some common shortcomings with standard Radiant layouts. It has been branched to work with the TrustyCMS
 
-http://github.com/squaretalent/radiant-layouts-extension/
+https://github.com/pgharts/trusty-share-layouts-extension
 
 ## Nested Layouts
 
@@ -47,6 +47,8 @@ SOFTWARE.
 == MIT Licence
 
 Copyright (c) 2010 Radiant - Jim Gay, William Ross
+
+TrustyCms is released under the MIT license. The Radiant portions of the codebase are copyright (c) John W. Long and Sean Cribbs; anything after the fork is copyright (c) Pittsburgh Cultural Trust. A copy of the MIT license can be found in the LICENSE file.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

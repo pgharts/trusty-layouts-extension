@@ -38,7 +38,7 @@ module NestedLayouts
             # Save contents of inside_layout for later insertion
             tag.globals.nested_layouts_content_stack << tag.expand
         
-            # Set the page layout that Radiant should use for rendering, which is different than the actual
+            # Set the page layout that Trusty should use for rendering, which is different than the actual
             # page's layout when layouts are nested.  The final/highest +inside_layout+ tag will set or 
             # overwrite this value for the last time.
             tag.globals.page.layout = layout
