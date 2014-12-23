@@ -6,7 +6,7 @@ class LayoutsExtension < TrustyCms::Extension
   def activate
     # Shared Layouts
     RailsPage
-    ActionController::Base.send :include, ShareLayouts::Controllers::ActionController
+    ApplicationController.send :include, ShareLayouts::Controllers::ActionController
     ActionView::Base.send :include, ShareLayouts::Helpers::ActionView
     
     # Nested Layouts
