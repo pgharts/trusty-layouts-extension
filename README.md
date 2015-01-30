@@ -1,5 +1,7 @@
 # Layouts
 
+[![Gem Version](https://badge.fury.io/rb/trusty-layouts-extension.svg)](http://badge.fury.io/rb/trusty-layouts-extension)
+
 Merges share_layouts and nested_layouts, making the whole layout adventure a lot more enjoyable
 
 ## Share Layouts
