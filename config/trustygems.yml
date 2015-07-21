@@ -1,0 +1,2 @@
+gemspec: trusty-layouts-extension.gemspec
+deploy_command: gem push
