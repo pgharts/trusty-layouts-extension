@@ -1,8 +1,8 @@
 PATH
   remote: .
   specs:
-    trusty-layouts-extension (2.0.1)
-      trusty-cms (~> 2.0.0.pre.beta)
+    trusty-layouts-extension (2.0.2)
+      trusty-cms (~> 2.0.0)
 
 GEM
   remote: https://rubygems.org/
