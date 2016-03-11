@@ -3,10 +3,10 @@ $:.push File.expand_path("../lib", __FILE__)
 require "trusty-layouts-extension"
 Gem::Specification.new do |s|
   s.name = %q{trusty-layouts-extension}
-  s.version = "2.0.2"
+  s.version = "2.0.3"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
-  s.authors = ["Eric Sipple", "Michael Klett", "Jim Gay", "William Ross", "Tony Issakov", "Dirk Kelly"]
+  s.authors = ["Eric Sipple", "Michael Klett", "Jim Gay", "William Ross", "Tony Issakov", "Dirk Kelly", "Brittany Martin"]
   s.description = %q{Extends Trusty CMS Layouts to support nesting, sharing with Rails Controllers and rendering HAML}
   s.email = %q{sipple@trustarts.org}
   s.homepage = %q{https://github.com/pgharts/trusty-share-layouts-extension}
@@ -24,7 +24,6 @@ Gem::Specification.new do |s|
   # s.executables   = Dir['bin/*'] - ignores
   s.require_paths = ["lib"]
 
-  s.add_dependency 'trusty-cms', '~> 2.0.0'
+  s.add_dependency 'trusty-cms', '~> 2.0.16'
 
 end
-
