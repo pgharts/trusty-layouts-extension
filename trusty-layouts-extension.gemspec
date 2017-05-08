@@ -3,7 +3,7 @@ $:.push File.expand_path("../lib", __FILE__)
 require "trusty-layouts-extension"
 Gem::Specification.new do |s|
   s.name = %q{trusty-layouts-extension}
-  s.version = "2.0.4"
+  s.version = "3.0.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Eric Sipple", "Michael Klett", "Jim Gay", "William Ross", "Tony Issakov", "Dirk Kelly", "Brittany Martin"]
@@ -24,6 +24,6 @@ Gem::Specification.new do |s|
   # s.executables   = Dir['bin/*'] - ignores
   s.require_paths = ["lib"]
 
-  s.add_dependency 'trusty-cms', '~> 2.0.16'
+  s.add_dependency 'trusty-cms', '~> 3.0.0'
 
 end
