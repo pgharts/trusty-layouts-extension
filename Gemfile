@@ -19,8 +19,6 @@ group :development, :test do
   gem 'launchy',          '~> 2.4.2'
   gem 'database_cleaner', '~> 1.3.0'
   gem 'poltergeist',      '~> 1.5.1'
-  gem 'factory_girl_rails', '~> 4.5.0'
-  gem 'rails-observers', :git => 'https://github.com/rails/rails-observers'
-  gem "protected_attributes_continued"
+  gem 'factory_girl_rails', '~> 4.6.0'
   gem "pry-byebug"
 end
